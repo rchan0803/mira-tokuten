@@ -124,6 +124,10 @@
   .price-now .yen { font-family: var(--font-body); font-size: 1rem; font-weight: 700; margin-left: .1rem; }
   .price-save { margin-left: auto; align-self: center; font-size: .78rem; font-weight: 700; color: var(--rose); background: color-mix(in srgb, var(--rose) 13%, transparent); border-radius: 999px; padding: .3rem .7rem; white-space: nowrap; font-variant-numeric: tabular-nums; }
 
+  /* stone gallery */
+  .stone-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(148px, 1fr)); gap: .7rem; }
+  .stone-gallery img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 12px; box-shadow: var(--shadow-soft); }
+
   /* bonus */
   .bonus { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 1.5rem 1.5rem 1.3rem; box-shadow: var(--shadow); }
   .bonus h3 { font-family: var(--font-display); font-size: 1rem; letter-spacing: .05em; margin: 0 0 .8rem; color: var(--ink); }
@@ -225,14 +229,14 @@
       <h2>パワーストーン・プラン</h2>
       <p>心と魂を癒し、理想の未来へ導く特別なブレス</p>
     </div>
-    <p class="sec-lead">石たちがあなたのお守りとなり、周りの感情を受け止めすぎてしまう心を優しく守りながら、ご自身のペースを取り戻す未来への流れを引き寄せてくれます。</p>
+    <p class="sec-lead">石たちがあなたのお守りとなり、日々ゆらぎやすい心をやさしく守りながら、ご自身のペースを取り戻す未来への流れを引き寄せてくれます。</p>
     <div class="plans">
       <article class="plan">
         <div class="plan-photo"><img src="images/thumb-hoshi.jpg" alt="星の輝きブレス" loading="lazy"></div>
         <div class="plan-body">
           <span class="plan-badge">★ 人気 No.2</span>
           <h3 class="plan-name">星の輝きブレス</h3>
-          <p class="plan-desc">漠然とした不安や焦りをやわらげ、心の奥にある安定を取り戻すサポート。あなたが本来もつ「人を思いやる温かな力」を守りながら、自分らしく輝ける環境や、良いご縁の流れをやさしく後押ししてくれるブレスレットです。</p>
+          <p class="plan-desc">漠然とした不安や焦りをやわらげ、心の奥に静かな安定を取り戻すサポート。ぶれない自分軸を保ちながら、自分らしくいられる環境や、良いご縁の流れを引き寄せていく、日々のお守りとなるブレスレットです。</p>
           <div class="price">
             <span class="price-was">通常 84,800円</span>
             <span class="price-now"><span class="lbl">特別</span>34,800<span class="yen">円</span></span>
@@ -258,7 +262,7 @@
         <div class="plan-body">
           <span class="plan-badge rose">♡ 人気 No.1</span>
           <h3 class="plan-name">月の結びブレス ＋ ご縁結びヒーリング</h3>
-          <p class="plan-desc">魂のエネルギーを本来の清らかな状態に整え、これまで抱えすぎてきた重荷をやさしく浄化。「他者の感情から自分を守る結界」を張りながら、あなたの優しさや魅力が正しく受け取られ、あたたかく心安らぐご縁を引き寄せるフルサポートです。</p>
+          <p class="plan-desc">魂のエネルギーを本来の清らかな状態に整え、知らず知らずのうちに溜め込んだ重荷をやさしく浄化。まわりに振り回されない穏やかな心を保ちながら、あたたかく心安らぐご縁を引き寄せる、縁結びのフルサポートです。</p>
           <p class="plan-note">＋ 特別プチ鑑定 1回つき</p>
           <div class="price">
             <span class="price-was">通常 120,000円</span>
@@ -274,7 +278,7 @@
         <div class="plan-body">
           <span class="plan-badge gold">✦ 満足度 No.1</span>
           <h3 class="plan-name">魂の覚醒ブレス ＋ 天命開花ヒーリング</h3>
-          <p class="plan-desc">「〜してはいけない」という思い込みや、自己犠牲という根本的なブロックを浄化し、心身の深い疲れを解放。「自分の幸せを一番に考えていい」と、ご自身に許可を出せるようになり、本来の輝きを呼び覚まします。心の安心も、日々のよろこびも——すべてに同時に働きかける、究極の覚醒プランです。</p>
+          <p class="plan-desc">長く握りしめてきた思い込みや、心の奥のブロックを解きほぐし、心身の深い疲れを解放。「自分の幸せを大切にしていい」と、本来の自分を取り戻せるように導きます。心の安心も、日々のよろこびも——すべてに働きかける、最上位の覚醒プランです。</p>
           <p class="plan-note">＋ 特別プチ鑑定 2回つき</p>
           <div class="price">
             <span class="price-was">通常 189,800円</span>
@@ -284,6 +288,25 @@
         </div>
       </article>
     </div>
+  </section>
+
+  <div class="divider"><b>✦ ✦ ✦</b></div>
+
+  <!-- 実際のブレスレット -->
+  <section>
+    <div class="sec-head">
+      <div class="sec-mark">◈</div>
+      <h2>実際にお作りした<br>ブレスレット</h2>
+      <p>お一人おひとりに合わせた、一点もののお守り</p>
+    </div>
+    <div class="stone-gallery">
+      <img src="images/img10.jpg" alt="淡いローズカラーのパワーストーンブレスレット" loading="lazy">
+      <img src="images/img04.jpg" alt="やわらかなブルーとクリームのブレスレット" loading="lazy">
+      <img src="images/img08.jpg" alt="ブルーとムーンストーンのブレスレット" loading="lazy">
+      <img src="images/img11.jpg" alt="イエローとブルーのブレスレット" loading="lazy">
+      <img src="images/img12.jpg" alt="パープルとブルーのブレスレット" loading="lazy">
+    </div>
+    <p class="sec-lead" style="margin: 1.3rem 0 0;">※お一人おひとりに合わせたオーダーメイドのため、お作りするブレスレットはその都度異なります。</p>
   </section>
 
   <div class="divider"><b>✦ ✦ ✦</b></div>
@@ -330,37 +353,37 @@
         <img class="avatar" src="images/mira.png" alt="ミラ">
         <div class="bubble-mira"><span class="who">ミラ</span><p>施術を受けられて、心や体にはどんな変化がありましたか？</p></div>
       </div>
-      <div class="msg msg-client"><div class="bubble-client"><img src="images/img02.jpg" alt="相談者さまからのメッセージ" loading="lazy"><span class="who">相談者さまより</span></div></div>
+      <div class="msg msg-client"><div class="bubble-client"><img src="images/img02.png" alt="相談者さまからのメッセージ" loading="lazy"><span class="who">相談者さまより</span></div></div>
 
       <div class="msg msg-mira">
         <img class="avatar" src="images/mira.png" alt="ミラ">
         <div class="bubble-mira"><span class="who">ミラ</span><p>ヒーリングのあと、毎日の過ごし方に変化はありましたか？</p></div>
       </div>
-      <div class="msg msg-client"><div class="bubble-client"><img src="images/img06.jpg" alt="相談者さまからのメッセージ" loading="lazy"><span class="who">相談者さまより</span></div></div>
+      <div class="msg msg-client"><div class="bubble-client"><img src="images/img06.png" alt="相談者さまからのメッセージ" loading="lazy"><span class="who">相談者さまより</span></div></div>
 
       <div class="msg msg-mira">
         <img class="avatar" src="images/mira.png" alt="ミラ">
         <div class="bubble-mira"><span class="who">ミラ</span><p>お手元に届いたパワーストーンは、いかがでしたか？</p></div>
       </div>
-      <div class="msg msg-client"><div class="bubble-client"><img src="images/img03.jpg" alt="相談者さまからのメッセージ" loading="lazy"><span class="who">相談者さまより</span></div></div>
+      <div class="msg msg-client"><div class="bubble-client"><img src="images/img03.png" alt="相談者さまからのメッセージ" loading="lazy"><span class="who">相談者さまより</span></div></div>
 
       <div class="msg msg-mira">
         <img class="avatar" src="images/mira.png" alt="ミラ">
         <div class="bubble-mira"><span class="who">ミラ</span><p>実際に着けてみた印象を、教えてください。</p></div>
       </div>
-      <div class="msg msg-client"><div class="bubble-client"><img src="images/img09.jpg" alt="相談者さまからのメッセージと、実際のブレスレット" loading="lazy"><span class="who">相談者さまより</span></div></div>
+      <div class="msg msg-client"><div class="bubble-client"><img src="images/img09.png" alt="相談者さまからのメッセージと、実際のブレスレット" loading="lazy"><span class="who">相談者さまより</span></div></div>
 
       <div class="msg msg-mira">
         <img class="avatar" src="images/mira.png" alt="ミラ">
         <div class="bubble-mira"><span class="who">ミラ</span><p>日々の暮らしのなかで、石はどんなふうに寄り添ってくれていますか？</p></div>
       </div>
-      <div class="msg msg-client"><div class="bubble-client"><img src="images/img07.jpg" alt="相談者さまからのメッセージ" loading="lazy"><span class="who">相談者さまより</span></div></div>
+      <div class="msg msg-client"><div class="bubble-client"><img src="images/img07.png" alt="相談者さまからのメッセージ" loading="lazy"><span class="who">相談者さまより</span></div></div>
 
       <div class="msg msg-mira">
         <img class="avatar" src="images/mira.png" alt="ミラ">
         <div class="bubble-mira"><span class="who">ミラ</span><p>その後、まわりでうれしい変化はありましたか？</p></div>
       </div>
-      <div class="msg msg-client"><div class="bubble-client"><img src="images/img01.jpg" alt="相談者さまからのメッセージ" loading="lazy"><span class="who">相談者さまより</span></div></div>
+      <div class="msg msg-client"><div class="bubble-client"><img src="images/img01.png" alt="相談者さまからのメッセージ" loading="lazy"><span class="who">相談者さまより</span></div></div>
 
     </div>
 
