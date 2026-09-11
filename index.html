@@ -62,7 +62,7 @@
   * { box-sizing: border-box; }
   img { max-width: 100%; display: block; }
 
-  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); line-height: 1.85; font-size: 16px; -webkit-font-smoothing: antialiased; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); line-height: 1.85; font-size: 16px; -webkit-font-smoothing: antialiased; word-break: auto-phrase; }
   .page { max-width: 700px; margin: 0 auto; padding-block: 0 4.5rem; padding-inline: clamp(1.1rem, 5vw, 2rem); position: relative; }
 
   .theme-toggle { position: fixed; top: 14px; right: 14px; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line-strong); background: var(--surface); color: var(--ink); font-size: 1rem; cursor: pointer; display: grid; place-items: center; z-index: 10; transition: transform .2s, border-color .2s; }
@@ -75,7 +75,7 @@
   .hero > * { position: relative; z-index: 1; }
   .eyebrow { font-size: .76rem; letter-spacing: .26em; color: var(--lavender); font-weight: 700; margin: 0 0 1.2rem; }
   .hero h1 { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.8rem, 5.8vw, 2.6rem); line-height: 1.5; letter-spacing: .02em; margin: 0 auto; max-width: 15em; text-wrap: balance; }
-  .hero h1 em { font-style: normal; color: var(--lavender); }
+  .hero h1 em { font-style: normal; color: var(--lavender); white-space: nowrap; }
   .hero-sub { color: var(--ink-soft); font-size: 1rem; max-width: 29em; margin: 1.4rem auto 0; }
 
   .divider { display: flex; align-items: center; gap: 1.1rem; margin: 2.3rem auto; color: var(--lavender-bright); }
@@ -196,7 +196,6 @@
   <!-- パワーストーンの教育 -->
   <section>
     <div class="sec-head">
-      <div class="sec-mark">✧</div>
       <h2>パワーストーンについて</h2>
       <p>なぜ、いま「石の力」なのか</p>
     </div>
