@@ -36,46 +36,23 @@
 
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --bg: #1b1526;
-      --surface: #251d33;
-      --surface-2: #2f2640;
-      --ink: #f0e8f3;
-      --ink-soft: #d4cadd;
-      --muted: #aca0ba;
-      --line: #362b48;
-      --line-strong: #453857;
-
-      --lavender: #b6a6e8;
-      --lavender-bright: #c9bcf2;
-      --rose: #e29cb8;
-      --sky: #9cc0e8;
-      --gold: #d8b069;
-      --gold-soft: #e7c98c;
-
+      --bg: #1b1526; --surface: #251d33; --surface-2: #2f2640;
+      --ink: #f0e8f3; --ink-soft: #d4cadd; --muted: #aca0ba;
+      --line: #362b48; --line-strong: #453857;
+      --lavender: #b6a6e8; --lavender-bright: #c9bcf2; --rose: #e29cb8; --sky: #9cc0e8;
+      --gold: #d8b069; --gold-soft: #e7c98c;
       --hero-wash: linear-gradient(155deg, rgba(165,150,220,.20), rgba(210,150,180,.13) 48%, rgba(150,190,216,.14));
       --shadow: 0 1px 2px rgba(0,0,0,.4), 0 16px 40px -22px rgba(0,0,0,.7);
       --shadow-soft: 0 2px 8px rgba(0,0,0,.4), 0 18px 42px -22px rgba(0,0,0,.7);
       --shadow-featured: 0 2px 8px rgba(0,0,0,.45), 0 22px 50px -22px rgba(120,90,40,.5);
     }
   }
-
   :root[data-theme="dark"] {
-    --bg: #1b1526;
-    --surface: #251d33;
-    --surface-2: #2f2640;
-    --ink: #f0e8f3;
-    --ink-soft: #d4cadd;
-    --muted: #aca0ba;
-    --line: #362b48;
-    --line-strong: #453857;
-
-    --lavender: #b6a6e8;
-    --lavender-bright: #c9bcf2;
-    --rose: #e29cb8;
-    --sky: #9cc0e8;
-    --gold: #d8b069;
-    --gold-soft: #e7c98c;
-
+    --bg: #1b1526; --surface: #251d33; --surface-2: #2f2640;
+    --ink: #f0e8f3; --ink-soft: #d4cadd; --muted: #aca0ba;
+    --line: #362b48; --line-strong: #453857;
+    --lavender: #b6a6e8; --lavender-bright: #c9bcf2; --rose: #e29cb8; --sky: #9cc0e8;
+    --gold: #d8b069; --gold-soft: #e7c98c;
     --hero-wash: linear-gradient(155deg, rgba(165,150,220,.20), rgba(210,150,180,.13) 48%, rgba(150,190,216,.14));
     --shadow: 0 1px 2px rgba(0,0,0,.4), 0 16px 40px -22px rgba(0,0,0,.7);
     --shadow-soft: 0 2px 8px rgba(0,0,0,.4), 0 18px 42px -22px rgba(0,0,0,.7);
@@ -85,87 +62,29 @@
   * { box-sizing: border-box; }
   img { max-width: 100%; display: block; }
 
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--ink);
-    font-family: var(--font-body);
-    line-height: 1.85;
-    font-size: 16px;
-    -webkit-font-smoothing: antialiased;
-  }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); line-height: 1.85; font-size: 16px; -webkit-font-smoothing: antialiased; }
+  .page { max-width: 700px; margin: 0 auto; padding-block: 0 4.5rem; padding-inline: clamp(1.1rem, 5vw, 2rem); position: relative; }
 
-  .page {
-    max-width: 700px;
-    margin: 0 auto;
-    padding-block: 0 4.5rem;
-    padding-inline: clamp(1.1rem, 5vw, 2rem);
-    position: relative;
-  }
-
-  .theme-toggle {
-    position: fixed;
-    top: 14px; right: 14px;
-    width: 40px; height: 40px;
-    border-radius: 50%;
-    border: 1px solid var(--line-strong);
-    background: var(--surface);
-    color: var(--ink);
-    font-size: 1rem; cursor: pointer;
-    display: grid; place-items: center;
-    z-index: 10;
-    transition: transform .2s, border-color .2s;
-  }
+  .theme-toggle { position: fixed; top: 14px; right: 14px; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line-strong); background: var(--surface); color: var(--ink); font-size: 1rem; cursor: pointer; display: grid; place-items: center; z-index: 10; transition: transform .2s, border-color .2s; }
   .theme-toggle:hover { border-color: var(--lavender); transform: rotate(-15deg); }
   .theme-toggle:focus-visible { outline: 2px solid var(--lavender); outline-offset: 2px; }
 
   /* hero */
-  .hero { position: relative; text-align: center; padding-block: 3.2rem 1.2rem; }
-  .hero::before {
-    content: "";
-    position: absolute; inset: -10% -20% auto -20%;
-    height: 130%;
-    background: var(--hero-wash);
-    filter: blur(6px);
-    border-radius: 50%;
-    pointer-events: none; z-index: 0;
-  }
+  .hero { position: relative; text-align: center; padding-block: 3.6rem 1.5rem; }
+  .hero::before { content: ""; position: absolute; inset: -10% -20% auto -20%; height: 150%; background: var(--hero-wash); filter: blur(6px); border-radius: 50%; pointer-events: none; z-index: 0; }
   .hero > * { position: relative; z-index: 1; }
   .eyebrow { font-size: .76rem; letter-spacing: .26em; color: var(--lavender); font-weight: 700; margin: 0 0 1.2rem; }
-  .hero h1 {
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: clamp(1.75rem, 5.6vw, 2.5rem);
-    line-height: 1.5; letter-spacing: .02em;
-    margin: 0 auto; max-width: 15em; text-wrap: balance;
-  }
+  .hero h1 { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.8rem, 5.8vw, 2.6rem); line-height: 1.5; letter-spacing: .02em; margin: 0 auto; max-width: 15em; text-wrap: balance; }
   .hero h1 em { font-style: normal; color: var(--lavender); }
   .hero-sub { color: var(--ink-soft); font-size: 1rem; max-width: 29em; margin: 1.4rem auto 0; }
-  .hero-img {
-    margin: 2rem auto 0; max-width: 440px;
-    border-radius: 20px; overflow: hidden;
-    box-shadow: var(--shadow-soft);
-    border: 4px solid var(--surface);
-  }
-  .hero-img img { width: 100%; }
 
-  /* divider */
   .divider { display: flex; align-items: center; gap: 1.1rem; margin: 3rem auto; color: var(--lavender-bright); }
   .divider::before, .divider::after { content: ""; height: 1px; flex: 1; background: linear-gradient(90deg, transparent, var(--line-strong), transparent); }
   .divider b { font-size: .9rem; letter-spacing: .3em; font-weight: 400; }
 
-  /* prose */
   .prose p { margin: 0 0 1.15rem; color: var(--ink-soft); }
   .prose p:last-child { margin-bottom: 0; }
   .prose strong { color: var(--rose); font-weight: 700; }
-
-  .wishes { list-style: none; margin: 1.6rem 0 0; padding: 0; display: flex; flex-direction: column; gap: .7rem; }
-  .wishes li {
-    position: relative; padding: .55rem 1rem .55rem 2.4rem;
-    background: var(--surface); border: 1px solid var(--line);
-    border-radius: 10px; color: var(--ink); font-size: .95rem; line-height: 1.7;
-  }
-  .wishes li::before { content: "✦"; position: absolute; left: .95rem; top: .5rem; color: var(--lavender-bright); font-size: .85rem; }
 
   /* section head */
   .sec-head { text-align: center; margin-bottom: 1.8rem; }
@@ -174,34 +93,30 @@
   .sec-head p { margin: 0; color: var(--muted); font-size: .92rem; }
   .sec-lead { text-align: center; color: var(--ink-soft); font-size: .93rem; margin: 0 0 1.5rem; }
 
+  /* education points */
+  .edu-points { list-style: none; margin: 1.8rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: .9rem; }
+  .edu-points li { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 1.1rem 1.2rem; text-align: center; }
+  .edu-points b { display: block; font-family: var(--font-display); font-size: 1rem; color: var(--lavender); margin-bottom: .4rem; letter-spacing: .02em; }
+  .edu-points span { font-size: .85rem; color: var(--ink-soft); line-height: 1.65; }
+
+  .wishes { list-style: none; margin: 1.6rem 0 0; padding: 0; display: flex; flex-direction: column; gap: .7rem; }
+  .wishes li { position: relative; padding: .55rem 1rem .55rem 2.4rem; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; color: var(--ink); font-size: .95rem; line-height: 1.7; }
+  .wishes li::before { content: "✦"; position: absolute; left: .95rem; top: .5rem; color: var(--lavender-bright); font-size: .85rem; }
+
   /* plan */
   .plans { display: flex; flex-direction: column; gap: 1.3rem; }
-  .plan {
-    position: relative; background: var(--surface);
-    border: 1px solid var(--line-strong); border-radius: 20px;
-    box-shadow: var(--shadow); overflow: hidden;
-  }
+  .plan { position: relative; background: var(--surface); border: 1px solid var(--line-strong); border-radius: 20px; box-shadow: var(--shadow); overflow: hidden; }
   .plan--featured { border: 1.5px solid var(--gold); box-shadow: var(--shadow-featured); }
-  .plan-photo { aspect-ratio: 16 / 10; overflow: hidden; background: var(--surface-2); }
+  .plan-photo { aspect-ratio: 1 / 1; overflow: hidden; background: var(--surface-2); }
   .plan-photo img { width: 100%; height: 100%; object-fit: cover; }
   .plan-body { padding: 1.4rem 1.5rem 1.5rem; display: flex; flex-direction: column; gap: .8rem; }
-  .plan-badge {
-    align-self: flex-start; display: inline-flex; align-items: center; gap: .4rem;
-    font-size: .72rem; font-weight: 700; letter-spacing: .09em;
-    color: var(--lavender); border: 1px solid var(--lavender); border-radius: 999px; padding: .26rem .8rem;
-  }
+  .plan-badge { align-self: flex-start; display: inline-flex; align-items: center; gap: .4rem; font-size: .72rem; font-weight: 700; letter-spacing: .09em; color: var(--lavender); border: 1px solid var(--lavender); border-radius: 999px; padding: .26rem .8rem; }
   .plan-badge.rose { color: var(--rose); border-color: var(--rose); }
   .plan-badge.gold { color: var(--gold); border-color: var(--gold); }
-  .plan-limited {
-    position: absolute; top: 1rem; right: 1rem; z-index: 2;
-    font-size: .72rem; font-weight: 700; letter-spacing: .06em; color: #fff;
-    background: var(--rose); border-radius: 6px; padding: .28rem .6rem;
-    box-shadow: 0 4px 12px -4px rgba(0,0,0,.4);
-  }
+  .plan-limited { position: absolute; top: 1rem; right: 1rem; z-index: 2; font-size: .72rem; font-weight: 700; letter-spacing: .06em; color: #fff; background: var(--rose); border-radius: 6px; padding: .28rem .6rem; box-shadow: 0 4px 12px -4px rgba(0,0,0,.4); }
   .plan-name { font-family: var(--font-display); font-weight: 700; font-size: 1.3rem; line-height: 1.5; letter-spacing: .02em; }
   .plan-desc { color: var(--ink-soft); font-size: .92rem; margin: 0; }
   .plan-note { font-size: .84rem; color: var(--muted); margin: 0; }
-
   .price { display: flex; align-items: baseline; flex-wrap: wrap; gap: .3rem .9rem; margin-top: .3rem; padding-top: 1rem; border-top: 1px solid var(--line); }
   .price-was { color: var(--muted); font-size: .92rem; text-decoration: line-through; text-decoration-color: var(--rose); font-variant-numeric: tabular-nums; }
   .price-now { font-family: var(--font-display); font-weight: 800; color: var(--gold); font-size: 2.1rem; line-height: 1; font-variant-numeric: tabular-nums; }
@@ -220,24 +135,24 @@
   .bonus-worth { flex-shrink: 0; font-size: .82rem; color: var(--muted); text-decoration: line-through; font-variant-numeric: tabular-nums; }
   .bonus-caption { margin: 1.1rem 0 0; font-size: .82rem; color: var(--muted); }
 
-  /* 対談 */
-  .talk { display: flex; flex-direction: column; gap: 2rem; }
-  .qa { display: flex; flex-direction: column; gap: .95rem; }
-  .q { align-self: flex-start; max-width: 92%; background: var(--surface-2); border: 1px solid var(--line); border-radius: 4px 16px 16px 16px; padding: .85rem 1.2rem; }
-  .q .who { display: block; font-size: .7rem; letter-spacing: .16em; color: var(--lavender); font-weight: 700; margin-bottom: .2rem; }
-  .q p { margin: 0; font-family: var(--font-display); font-size: 1.02rem; color: var(--ink); line-height: 1.7; }
-  .a { align-self: center; width: 100%; max-width: 390px; }
-  .a img { width: 100%; border-radius: 14px; box-shadow: var(--shadow-soft); }
-  .a .who { text-align: center; font-size: .7rem; letter-spacing: .16em; color: var(--rose); font-weight: 700; margin-top: .55rem; }
+  /* chat (対談) */
+  .chat { display: flex; flex-direction: column; gap: 1.5rem; }
+  .msg { display: flex; gap: .65rem; align-items: flex-end; max-width: 100%; }
+  .msg-mira { align-self: flex-start; }
+  .msg-client { align-self: flex-end; }
+  .avatar { width: 46px; height: 46px; border-radius: 50%; object-fit: cover; object-position: 50% 26%; flex-shrink: 0; border: 2px solid var(--surface); box-shadow: var(--shadow); background: var(--surface-2); }
+  .bubble-mira { background: var(--surface-2); border: 1px solid var(--line); border-radius: 4px 16px 16px 16px; padding: .8rem 1.1rem; max-width: 80%; }
+  .bubble-mira .who { display: block; font-size: .68rem; letter-spacing: .16em; color: var(--lavender); font-weight: 700; margin-bottom: .15rem; }
+  .bubble-mira p { margin: 0; font-family: var(--font-display); font-size: 1rem; color: var(--ink); line-height: 1.7; }
+  .bubble-client { max-width: 300px; }
+  .bubble-client img { width: 100%; border-radius: 14px; box-shadow: var(--shadow-soft); }
+  .bubble-client .who { display: block; text-align: right; font-size: .68rem; letter-spacing: .14em; color: var(--rose); font-weight: 700; margin-top: .45rem; }
 
   .more-voices { margin-top: 2.4rem; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 1.4rem 1.5rem; box-shadow: var(--shadow); }
   .more-voices h3 { font-family: var(--font-display); font-size: 1rem; margin: 0 0 1rem; color: var(--ink); text-align: center; letter-spacing: .04em; }
   .more-voices ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .8rem; }
   .more-voices li { position: relative; padding-left: 1.5rem; color: var(--ink-soft); font-size: .92rem; line-height: 1.7; }
   .more-voices li::before { content: "♡"; position: absolute; left: 0; top: .1rem; color: var(--rose); }
-  .voices-more { text-align: center; margin: 1.4rem 0 0; }
-  .voices-more a { color: var(--lavender); font-weight: 700; font-size: .9rem; text-decoration: none; border-bottom: 1px solid var(--lavender-bright); padding-bottom: 1px; }
-  .voices-more a:hover { color: var(--lavender-bright); }
 
   /* urgency */
   .urgency { text-align: center; background: var(--surface-2); border: 1px solid var(--line-strong); border-radius: 18px; padding: 1.6rem 1.5rem; }
@@ -265,18 +180,37 @@
     <p class="eyebrow">占い師 ミラ ・ 特別なご案内</p>
     <h1>特別な施術と、<br>あなただけの<em>パワーストーン</em></h1>
     <p class="hero-sub">魂と現実の両方に、やさしく働きかける——ミラの特別なサポートメニューのご案内です。ご興味をもっていただき、ありがとうございます。</p>
-    <div class="hero-img"><img src="images/img10.jpg" alt="ミラが選んだ、淡い色合いのオーダーメイド・パワーストーンブレスレット" loading="lazy"></div>
   </header>
 
   <div class="divider"><b>✦</b></div>
 
+  <!-- パワーストーンの教育 -->
+  <section>
+    <div class="sec-head">
+      <div class="sec-mark">◈</div>
+      <h2>パワーストーンについて</h2>
+      <p>なぜ、いま「石の力」なのか</p>
+    </div>
+    <div class="prose">
+      <p>パワーストーンは、古くから世界中で「お守り」として大切にされてきた、自然が生み出した石です。石にはそれぞれ固有の波動（エネルギー）があり、身につける人の心を整え、本来の自分とのつながりを取り戻す手助けをしてくれると伝えられてきました。</p>
+      <p>ミラのブレスレットは、既製品ではありません。お一人おひとりの「今の状態」と「心からの願い」を霊視で視させていただき、その方に本当に必要な石だけを、ひとつずつ丁寧に選んでお組みする<strong>完全オーダーメイド</strong>。だから、同じものは二つとありません。</p>
+    </div>
+    <ul class="edu-points">
+      <li><b>自然の石の波動</b><span>心を整え、本来の自分とのつながりを取り戻す手助けに</span></li>
+      <li><b>あなただけの選定</b><span>今の状態と願いを霊視し、必要な石だけを一つずつ厳選</span></li>
+      <li><b>日々に寄り添うお守り</b><span>不安なときにそっと支え、望む未来への流れを後押し</span></li>
+    </ul>
+  </section>
+
+  <div class="divider"><b>✦ ✦ ✦</b></div>
+
   <section class="prose">
-    <p>ご紹介する施術とオーダーメイドのパワーストーンブレスレットは、これまでにも多くの方が「休むことへの罪悪感がなくなり、自分らしくいられる職場に巡り会えた」「心に余白ができ、家族と笑顔で過ごせるようになった」——そんな形で変化を実感されてきた、魂と現実に直接働きかける本格的なサポートメニューです。</p>
-    <p>今回は<strong>【期間限定・特別価格】</strong>でのご提供。次のような願いが芽生えている方へ、ぜひお届けできればと願っています。</p>
+    <p>ご紹介する施術とオーダーメイドのパワーストーンブレスレットは、これまでにも多くの方が「心に余白ができ、穏やかに過ごせるようになった」「自分らしくいられる環境やご縁に恵まれた」——そんな形で変化を実感されてきた、魂と現実に直接働きかける本格的なサポートメニューです。</p>
+      <p>今回は<strong>【期間限定・特別価格】</strong>でのご提供。次のような願いをお持ちの方へ、ぜひお届けできればと願っています。</p>
     <ul class="wishes">
-      <li>自分を後回しにしてしまう苦しさから解放されたい</li>
-      <li>罪悪感を手放し、心身をゆっくり休める「余白」を作りたい</li>
-      <li>自分らしく輝ける場所でやりがいを感じ、大切な人に幸せを届けたい</li>
+      <li>漠然とした不安や焦りから、そっと解放されたい</li>
+      <li>心にゆとり（余白）を取り戻して、穏やかに過ごしたい</li>
+      <li>自分らしく輝いて、大切な人にも笑顔と幸せを届けたい</li>
     </ul>
   </section>
 
@@ -292,11 +226,11 @@
     <p class="sec-lead">石たちがあなたのお守りとなり、周りの感情を受け止めすぎてしまう心を優しく守りながら、ご自身のペースを取り戻す未来への流れを引き寄せてくれます。</p>
     <div class="plans">
       <article class="plan">
-        <div class="plan-photo"><img src="images/img08.jpg" alt="星の輝きブレス（アクアマリン・ムーンストーン・水晶）" loading="lazy"></div>
+        <div class="plan-photo"><img src="images/thumb-hoshi.jpg" alt="星の輝きブレス" loading="lazy"></div>
         <div class="plan-body">
           <span class="plan-badge">★ 人気 No.2</span>
           <h3 class="plan-name">星の輝きブレス</h3>
-          <p class="plan-desc">今後の進路に対する不安や焦りを和らげ、心の奥底からの安定を取り戻すサポート。あなたが本来持つ「人を思いやる温かな力」を守りながら、無理なく自分らしく輝ける環境とのご縁の流れを活性化させるブレスレットです。</p>
+          <p class="plan-desc">漠然とした不安や焦りをやわらげ、心の奥にある安定を取り戻すサポート。あなたが本来もつ「人を思いやる温かな力」を守りながら、自分らしく輝ける環境や、良いご縁の流れをそっと活性化させてくれるブレスレットです。</p>
           <div class="price">
             <span class="price-was">通常 84,800円</span>
             <span class="price-now"><span class="lbl">特別</span>34,800<span class="yen">円</span></span>
@@ -318,11 +252,11 @@
     </div>
     <div class="plans">
       <article class="plan">
-        <div class="plan-photo"><img src="images/img04.jpg" alt="月の結びブレス（淡いブルーとクリームの石）" loading="lazy"></div>
+        <div class="plan-photo"><img src="images/thumb-tsuki.jpg" alt="月の結びブレス ＋ ご縁結びヒーリング" loading="lazy"></div>
         <div class="plan-body">
           <span class="plan-badge rose">♡ 人気 No.1</span>
           <h3 class="plan-name">月の結びブレス ＋ ご縁結びヒーリング</h3>
-          <p class="plan-desc">あなたの魂のエネルギーを本来の清らかな状態に調整し、これまで他者のために背負いすぎてしまった重荷を強力に浄化。「他者の感情から守る結界」を張りながら、あなたの細やかな気配りや優しさが正当に評価される、アットホームで心安らぐ理想の環境との強いご縁を引き寄せるフルサポートです。</p>
+          <p class="plan-desc">魂のエネルギーを本来の清らかな状態に整え、これまで抱えすぎてきた重荷をやさしく浄化。「他者の感情から自分を守る結界」を張りながら、あなたの優しさや魅力が正しく受け取られ、あたたかく心安らぐご縁を引き寄せるフルサポートです。</p>
           <p class="plan-note">＋ 特別プチ鑑定 1回つき</p>
           <div class="price">
             <span class="price-was">通常 120,000円</span>
@@ -334,11 +268,11 @@
 
       <article class="plan plan--featured">
         <span class="plan-limited">1名様限定</span>
-        <div class="plan-photo"><img src="images/img12.jpg" alt="魂の覚醒ブレス（ラベンダー・ストロベリークォーツ・ブルーの石）" loading="lazy"></div>
+        <div class="plan-photo"><img src="images/thumb-kakusei.jpg" alt="魂の覚醒ブレス ＋ 天命開花ヒーリング" loading="lazy"></div>
         <div class="plan-body">
           <span class="plan-badge gold">✦ 満足度 No.1</span>
           <h3 class="plan-name">魂の覚醒ブレス ＋ 天命開花ヒーリング</h3>
-          <p class="plan-desc">「休むとバチが当たる」という罪悪感や、自己犠牲という根本的なブロックを浄化し、あなたが抱える心身の疲弊を深く解放。「ご自身の幸せを一番に考える許可」を出せるようになり、本来の輝きを目覚めさせます。自分らしく働けるやりがい、収入面での安心、大切な人に還元できる笑顔——すべてに同時に働きかける、究極の覚醒プランです。</p>
+          <p class="plan-desc">「〜してはいけない」という思い込みや、自己犠牲という根本的なブロックを浄化し、心身の深い疲れを解放。「自分の幸せを一番に考えていい」と、ご自身に許可を出せるようになり、本来の輝きを呼び覚まします。心の安心も、日々のよろこびも——すべてに同時に働きかける、究極の覚醒プランです。</p>
           <p class="plan-note">＋ 特別プチ鑑定 2回つき</p>
           <div class="price">
             <span class="price-was">通常 189,800円</span>
@@ -385,35 +319,46 @@
   <section>
     <div class="sec-head">
       <div class="sec-mark">♡</div>
-      <h2>施術を受けた方に、<br>聞いてみました</h2>
-      <p>ミラと相談者さまの、実際のやりとりです</p>
+      <h2>ミラと相談者さまの、<br>実際のやりとり</h2>
+      <p>施術とパワーストーンを受けた方の、生のお声です</p>
     </div>
-    <div class="talk">
+    <div class="chat">
 
-      <div class="qa">
-        <div class="q"><span class="who">ミラ</span><p>施術を受けられて、心や体にはどんな変化がありましたか？</p></div>
-        <div class="a"><img src="images/img02.jpg" alt="相談者さまからのメッセージ" loading="lazy"><span class="who">相談者さまより</span></div>
+      <div class="msg msg-mira">
+        <img class="avatar" src="images/mira.png" alt="ミラ">
+        <div class="bubble-mira"><span class="who">ミラ</span><p>施術を受けられて、心や体にはどんな変化がありましたか？</p></div>
       </div>
+      <div class="msg msg-client"><div class="bubble-client"><img src="images/img02.jpg" alt="相談者さまからのメッセージ" loading="lazy"><span class="who">相談者さまより</span></div></div>
 
-      <div class="qa">
-        <div class="q"><span class="who">ミラ</span><p>ヒーリングのあと、毎日の過ごし方に変化はありましたか？</p></div>
-        <div class="a"><img src="images/img06.jpg" alt="相談者さまからのメッセージ" loading="lazy"><span class="who">相談者さまより</span></div>
+      <div class="msg msg-mira">
+        <img class="avatar" src="images/mira.png" alt="ミラ">
+        <div class="bubble-mira"><span class="who">ミラ</span><p>ヒーリングのあと、毎日の過ごし方に変化はありましたか？</p></div>
       </div>
+      <div class="msg msg-client"><div class="bubble-client"><img src="images/img06.jpg" alt="相談者さまからのメッセージ" loading="lazy"><span class="who">相談者さまより</span></div></div>
 
-      <div class="qa">
-        <div class="q"><span class="who">ミラ</span><p>お手元に届いたパワーストーンは、いかがでしたか？</p></div>
-        <div class="a"><img src="images/img09.jpg" alt="相談者さまからのメッセージと、実際のブレスレット" loading="lazy"><span class="who">相談者さまより</span></div>
+      <div class="msg msg-mira">
+        <img class="avatar" src="images/mira.png" alt="ミラ">
+        <div class="bubble-mira"><span class="who">ミラ</span><p>お手元に届いたパワーストーンは、いかがでしたか？</p></div>
       </div>
+      <div class="msg msg-client"><div class="bubble-client"><img src="images/img03.jpg" alt="相談者さまからのメッセージ" loading="lazy"><span class="who">相談者さまより</span></div></div>
 
-      <div class="qa">
-        <div class="q"><span class="who">ミラ</span><p>日々の暮らしのなかで、石はどんなふうに寄り添ってくれていますか？</p></div>
-        <div class="a"><img src="images/img07.jpg" alt="相談者さまからのメッセージ" loading="lazy"><span class="who">相談者さまより</span></div>
+      <div class="msg msg-mira">
+        <img class="avatar" src="images/mira.png" alt="ミラ">
+        <div class="bubble-mira"><span class="who">ミラ</span><p>実際に着けてみた印象を、教えてください。</p></div>
       </div>
+      <div class="msg msg-client"><div class="bubble-client"><img src="images/img09.jpg" alt="相談者さまからのメッセージと、実際のブレスレット" loading="lazy"><span class="who">相談者さまより</span></div></div>
 
-      <div class="qa">
-        <div class="q"><span class="who">ミラ</span><p>その後、まわりでうれしい変化はありましたか？</p></div>
-        <div class="a"><img src="images/img01.jpg" alt="相談者さまからのメッセージ" loading="lazy"><span class="who">相談者さまより</span></div>
+      <div class="msg msg-mira">
+        <img class="avatar" src="images/mira.png" alt="ミラ">
+        <div class="bubble-mira"><span class="who">ミラ</span><p>日々の暮らしのなかで、石はどんなふうに寄り添ってくれていますか？</p></div>
       </div>
+      <div class="msg msg-client"><div class="bubble-client"><img src="images/img07.jpg" alt="相談者さまからのメッセージ" loading="lazy"><span class="who">相談者さまより</span></div></div>
+
+      <div class="msg msg-mira">
+        <img class="avatar" src="images/mira.png" alt="ミラ">
+        <div class="bubble-mira"><span class="who">ミラ</span><p>その後、まわりでうれしい変化はありましたか？</p></div>
+      </div>
+      <div class="msg msg-client"><div class="bubble-client"><img src="images/img01.jpg" alt="相談者さまからのメッセージ" loading="lazy"><span class="who">相談者さまより</span></div></div>
 
     </div>
 
@@ -421,10 +366,9 @@
       <h3>他にも、こんなお声が届いています</h3>
       <ul>
         <li>自分を責める癖がなくなり、心に「余白」ができました。休むことへの罪悪感が消え、毎日が穏やかです。</li>
-        <li>不思議と私を守ってくれるようなご縁に恵まれ、自分の能力を心から喜んでもらえるアットホームな職場に転職できました。</li>
-        <li>心身のバランスが整ったことで、家族と笑顔で過ごす時間が増え、収入面でも安心できる未来が手に入りました。</li>
+        <li>不思議と私を守ってくれるようなご縁に恵まれ、自分の力を心から喜んでもらえる場所に巡り会えました。</li>
+        <li>心身のバランスが整ったことで、大切な人と笑顔で過ごす時間が増え、毎日に安心感が生まれました。</li>
       </ul>
-      <p class="voices-more"><a href="https://note.com/preview/nf7014cf6a38b?prev_access_key=366a05fdad444f956caf2853d750ce8e" target="_blank" rel="noopener">他のご報告も読む →</a></p>
     </div>
   </section>
 
@@ -444,7 +388,7 @@
     <div class="prose">
       <p>もちろん、ご予算やご状況もあるかと存じます。決して無理のない範囲でご検討くださいね。少しでも「気になる」「心が動いた」と感じられた場合には、遠慮なくご相談くださいませ。</p>
     </div>
-    <p class="wish-final">「罪悪感を手放して自分の中に余白を作り、<em>自分らしく過ごしながら、大切な人に笑顔と幸せを届ける</em>」——その願いが、運命として固く結ばれますように。</p>
+    <p class="wish-final">「心の余白を取り戻して、<em>自分らしく過ごしながら、大切な人に笑顔と幸せを届ける</em>」——その願いが、運命として固く結ばれますように。</p>
     <p class="sign">ご連絡を心よりお待ちしております ✦ ミラ</p>
   </section>
 
