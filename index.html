@@ -70,7 +70,7 @@
   .theme-toggle:focus-visible { outline: 2px solid var(--lavender); outline-offset: 2px; }
 
   /* hero */
-  .hero { position: relative; text-align: center; padding-block: 3.6rem 1.5rem; }
+  .hero { position: relative; text-align: center; padding-block: 3rem 0.3rem; }
   .hero::before { content: ""; position: absolute; inset: -10% -20% auto -20%; height: 150%; background: var(--hero-wash); filter: blur(6px); border-radius: 50%; pointer-events: none; z-index: 0; }
   .hero > * { position: relative; z-index: 1; }
   .eyebrow { font-size: .76rem; letter-spacing: .26em; color: var(--lavender); font-weight: 700; margin: 0 0 1.2rem; }
@@ -78,7 +78,7 @@
   .hero h1 em { font-style: normal; color: var(--lavender); }
   .hero-sub { color: var(--ink-soft); font-size: 1rem; max-width: 29em; margin: 1.4rem auto 0; }
 
-  .divider { display: flex; align-items: center; gap: 1.1rem; margin: 3rem auto; color: var(--lavender-bright); }
+  .divider { display: flex; align-items: center; gap: 1.1rem; margin: 2.3rem auto; color: var(--lavender-bright); }
   .divider::before, .divider::after { content: ""; height: 1px; flex: 1; background: linear-gradient(90deg, transparent, var(--line-strong), transparent); }
   .divider b { font-size: .9rem; letter-spacing: .3em; font-weight: 400; }
 
@@ -140,7 +140,10 @@
   .bonus-caption { margin: 1.1rem 0 0; font-size: .82rem; color: var(--muted); }
 
   /* chat (対談) */
-  .chat { display: flex; flex-direction: column; gap: 1.5rem; }
+  .chat { display: flex; flex-direction: column; gap: 2.4rem; }
+  .qa-block { display: flex; flex-direction: column; gap: .95rem; }
+  .qa-title { align-self: center; font-family: var(--font-display); font-size: .92rem; color: var(--lavender); letter-spacing: .1em; margin: 0; padding-bottom: .3rem; border-bottom: 1px solid var(--line-strong); }
+  .bonus-tag { display: inline-block; font-size: .72rem; font-weight: 700; letter-spacing: .08em; color: #fff; background: var(--rose); border-radius: 6px; padding: .24rem .7rem; margin: 0 0 .9rem; }
   .msg { display: flex; gap: .65rem; align-items: flex-end; max-width: 92%; }
   .msg-mira { align-self: flex-start; }
   .msg-client { align-self: flex-end; }
@@ -156,7 +159,7 @@
   .more-voices h3 { font-family: var(--font-display); font-size: 1rem; margin: 0 0 1rem; color: var(--ink); text-align: center; letter-spacing: .04em; }
   .more-voices ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .8rem; }
   .more-voices li { position: relative; padding-left: 1.5rem; color: var(--ink-soft); font-size: .92rem; line-height: 1.7; }
-  .more-voices li::before { content: "♡"; position: absolute; left: 0; top: .1rem; color: var(--rose); }
+  .more-voices li::before { content: "✦"; position: absolute; left: 0; top: .1rem; color: var(--rose); }
 
   /* urgency */
   .urgency { text-align: center; background: var(--surface-2); border: 1px solid var(--line-strong); border-radius: 18px; padding: 1.6rem 1.5rem; }
@@ -260,7 +263,7 @@
       <article class="plan">
         <div class="plan-photo"><img src="images/thumb-tsuki.jpg" alt="月の結びブレス ＋ ご縁結びヒーリング" loading="lazy"></div>
         <div class="plan-body">
-          <span class="plan-badge rose">♡ 人気 No.1</span>
+          <span class="plan-badge rose">★ 人気 No.1</span>
           <h3 class="plan-name">月の結びブレス ＋ ご縁結びヒーリング</h3>
           <p class="plan-desc">魂のエネルギーを本来の清らかな状態に整え、知らず知らずのうちに溜め込んだ重荷をやさしく浄化。まわりに振り回されない穏やかな心を保ちながら、あたたかく心安らぐご縁を引き寄せる、縁結びのフルサポートです。</p>
           <p class="plan-note">＋ 特別プチ鑑定 1回つき</p>
@@ -305,6 +308,7 @@
       <img src="images/img08.jpg" alt="ブルーとムーンストーンのブレスレット" loading="lazy">
       <img src="images/img11.jpg" alt="イエローとブルーのブレスレット" loading="lazy">
       <img src="images/img12.jpg" alt="パープルとブルーのブレスレット" loading="lazy">
+      <img src="images/img13.jpg" alt="ブラックとゴールドのブレスレット" loading="lazy">
     </div>
     <p class="sec-lead" style="margin: 1.3rem 0 0;">※お一人おひとりに合わせたオーダーメイドのため、お作りするブレスレットはその都度異なります。</p>
   </section>
@@ -321,7 +325,11 @@
     <div class="bonus">
       <div class="bonus-row"><span class="bonus-item">ブレス浄化用さざれ石</span><span class="bonus-worth">通常 5,000円相当</span></div>
       <div class="bonus-row"><span class="bonus-item">波動調整サウンド音源</span><span class="bonus-worth">通常 4,000円相当</span></div>
-      <h3>さらに、こちらも《無料》で</h3>
+    </div>
+
+    <div class="bonus" style="margin-top: 1.2rem; border-color: var(--rose);">
+      <span class="bonus-tag">期間限定・今だけ</span>
+      <h3 style="margin-top: 0;">さらに、こちらも《無料》で</h3>
       <div class="bonus-row">
         <span class="bonus-item">Zoom個別セッション
           <small>調整後のエネルギーを維持しながら理想の未来を引き寄せる方法や、今後の流れをより良くするアドバイスを全力でお届けします。</small>
@@ -343,47 +351,65 @@
   <!-- 対談：お客様の声 -->
   <section>
     <div class="sec-head">
-      <div class="sec-mark">♡</div>
+      <div class="sec-mark">✦</div>
       <h2>ミラと相談者さまの、<br>実際のやりとり</h2>
       <p>施術とパワーストーンを受けた方の、生のお声です</p>
     </div>
     <div class="chat">
 
-      <div class="msg msg-mira">
-        <img class="avatar" src="images/mira.png" alt="ミラ">
-        <div class="bubble-mira"><span class="who">ミラ</span><p>施術を受けられて、心や体にはどんな変化がありましたか？</p></div>
+      <div class="qa-block">
+        <p class="qa-title">施術の実感</p>
+        <div class="msg msg-mira">
+          <img class="avatar" src="images/mira.png" alt="ミラ">
+          <div class="bubble-mira"><span class="who">ミラ</span><p>施術を受けられて、心や体にはどんな変化がありましたか？</p></div>
+        </div>
+        <div class="msg msg-client"><div class="bubble-client"><img src="images/img02.png" alt="40代 主婦 A様からのメッセージ" loading="lazy"><span class="who">40代 主婦 A様</span></div></div>
       </div>
-      <div class="msg msg-client"><div class="bubble-client"><img src="images/img02.png" alt="相談者さまからのメッセージ" loading="lazy"><span class="who">相談者さまより</span></div></div>
 
-      <div class="msg msg-mira">
-        <img class="avatar" src="images/mira.png" alt="ミラ">
-        <div class="bubble-mira"><span class="who">ミラ</span><p>ヒーリングのあと、毎日の過ごし方に変化はありましたか？</p></div>
+      <div class="qa-block">
+        <p class="qa-title">毎日の変化</p>
+        <div class="msg msg-mira">
+          <img class="avatar" src="images/mira.png" alt="ミラ">
+          <div class="bubble-mira"><span class="who">ミラ</span><p>ヒーリングのあと、毎日の過ごし方に変化はありましたか？</p></div>
+        </div>
+        <div class="msg msg-client"><div class="bubble-client"><img src="images/img06.png" alt="30代 会社員 B様からのメッセージ" loading="lazy"><span class="who">30代 会社員 B様</span></div></div>
       </div>
-      <div class="msg msg-client"><div class="bubble-client"><img src="images/img06.png" alt="相談者さまからのメッセージ" loading="lazy"><span class="who">相談者さまより</span></div></div>
 
-      <div class="msg msg-mira">
-        <img class="avatar" src="images/mira.png" alt="ミラ">
-        <div class="bubble-mira"><span class="who">ミラ</span><p>お手元に届いたパワーストーンは、いかがでしたか？</p></div>
+      <div class="qa-block">
+        <p class="qa-title">石が届いて</p>
+        <div class="msg msg-mira">
+          <img class="avatar" src="images/mira.png" alt="ミラ">
+          <div class="bubble-mira"><span class="who">ミラ</span><p>お手元に届いたパワーストーンは、いかがでしたか？</p></div>
+        </div>
+        <div class="msg msg-client"><div class="bubble-client"><img src="images/img03.png" alt="50代 主婦 C様からのメッセージ" loading="lazy"><span class="who">50代 主婦 C様</span></div></div>
       </div>
-      <div class="msg msg-client"><div class="bubble-client"><img src="images/img03.png" alt="相談者さまからのメッセージ" loading="lazy"><span class="who">相談者さまより</span></div></div>
 
-      <div class="msg msg-mira">
-        <img class="avatar" src="images/mira.png" alt="ミラ">
-        <div class="bubble-mira"><span class="who">ミラ</span><p>実際に着けてみた印象を、教えてください。</p></div>
+      <div class="qa-block">
+        <p class="qa-title">着け心地</p>
+        <div class="msg msg-mira">
+          <img class="avatar" src="images/mira.png" alt="ミラ">
+          <div class="bubble-mira"><span class="who">ミラ</span><p>実際に着けてみた印象を、教えてください。</p></div>
+        </div>
+        <div class="msg msg-client"><div class="bubble-client"><img src="images/img09.png" alt="30代 会社員 D様からのメッセージと、実際のブレスレット" loading="lazy"><span class="who">30代 会社員 D様</span></div></div>
       </div>
-      <div class="msg msg-client"><div class="bubble-client"><img src="images/img09.png" alt="相談者さまからのメッセージと、実際のブレスレット" loading="lazy"><span class="who">相談者さまより</span></div></div>
 
-      <div class="msg msg-mira">
-        <img class="avatar" src="images/mira.png" alt="ミラ">
-        <div class="bubble-mira"><span class="who">ミラ</span><p>日々の暮らしのなかで、石はどんなふうに寄り添ってくれていますか？</p></div>
+      <div class="qa-block">
+        <p class="qa-title">日々のお守り</p>
+        <div class="msg msg-mira">
+          <img class="avatar" src="images/mira.png" alt="ミラ">
+          <div class="bubble-mira"><span class="who">ミラ</span><p>日々の暮らしのなかで、石はどんなふうに寄り添ってくれていますか？</p></div>
+        </div>
+        <div class="msg msg-client"><div class="bubble-client"><img src="images/img07.png" alt="40代 パート E様からのメッセージ" loading="lazy"><span class="who">40代 パート E様</span></div></div>
       </div>
-      <div class="msg msg-client"><div class="bubble-client"><img src="images/img07.png" alt="相談者さまからのメッセージ" loading="lazy"><span class="who">相談者さまより</span></div></div>
 
-      <div class="msg msg-mira">
-        <img class="avatar" src="images/mira.png" alt="ミラ">
-        <div class="bubble-mira"><span class="who">ミラ</span><p>その後、まわりでうれしい変化はありましたか？</p></div>
+      <div class="qa-block">
+        <p class="qa-title">その後のご縁</p>
+        <div class="msg msg-mira">
+          <img class="avatar" src="images/mira.png" alt="ミラ">
+          <div class="bubble-mira"><span class="who">ミラ</span><p>その後、まわりでうれしい変化はありましたか？</p></div>
+        </div>
+        <div class="msg msg-client"><div class="bubble-client"><img src="images/img01.png" alt="30代 主婦 F様からのメッセージ" loading="lazy"><span class="who">30代 主婦 F様</span></div></div>
       </div>
-      <div class="msg msg-client"><div class="bubble-client"><img src="images/img01.png" alt="相談者さまからのメッセージ" loading="lazy"><span class="who">相談者さまより</span></div></div>
 
     </div>
 
