@@ -117,6 +117,12 @@
   .plan-name { font-family: var(--font-display); font-weight: 700; font-size: 1.3rem; line-height: 1.5; letter-spacing: .02em; }
   .plan-desc { color: var(--ink-soft); font-size: .92rem; margin: 0; }
   .plan-note { font-size: .84rem; color: var(--muted); margin: 0; }
+  .plan-perks { background: var(--surface-2); border-radius: 10px; padding: .8rem 1rem; }
+  .plan-perks .perks-label { display: block; font-size: .72rem; font-weight: 700; letter-spacing: .1em; color: var(--gold); margin-bottom: .45rem; }
+  .plan-perks ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .32rem; }
+  .plan-perks li { position: relative; padding-left: 1.15rem; font-size: .85rem; color: var(--ink-soft); line-height: 1.55; }
+  .plan-perks li::before { content: "✓"; position: absolute; left: 0; color: var(--gold); font-weight: 700; }
+  .perk-tag { display: inline-block; margin-left: .4rem; font-size: .66rem; font-weight: 700; color: var(--rose); background: color-mix(in srgb, var(--rose) 13%, transparent); border-radius: 4px; padding: .06rem .38rem; letter-spacing: .04em; vertical-align: middle; }
   .price { display: flex; align-items: baseline; flex-wrap: wrap; gap: .3rem .9rem; margin-top: .3rem; padding-top: 1rem; border-top: 1px solid var(--line); }
   .price-was { color: var(--muted); font-size: .92rem; text-decoration: line-through; text-decoration-color: var(--rose); font-variant-numeric: tabular-nums; }
   .price-now { font-family: var(--font-display); font-weight: 800; color: var(--gold); font-size: 2.1rem; line-height: 1; font-variant-numeric: tabular-nums; }
@@ -265,7 +271,15 @@
           <span class="plan-badge rose">★ 人気 No.1</span>
           <h3 class="plan-name">月の結びブレス ＋ ご縁結びヒーリング</h3>
           <p class="plan-desc">魂のエネルギーを本来の清らかな状態に整え、知らず知らずのうちに溜め込んだ重荷をやさしく浄化。まわりに振り回されない穏やかな心を保ちながら、あたたかく心安らぐご縁を引き寄せる、縁結びのフルサポートです。</p>
-          <p class="plan-note">＋ 特別プチ鑑定 1回つき</p>
+          <div class="plan-perks">
+            <span class="perks-label">含まれる特典（すべて無料）</span>
+            <ul>
+              <li>ブレス浄化用さざれ石</li>
+              <li>波動調整サウンド音源</li>
+              <li>Zoom個別セッション<span class="perk-tag">期間限定</span></li>
+              <li>特別プチ鑑定 1回<span class="perk-tag">期間限定</span></li>
+            </ul>
+          </div>
           <div class="price">
             <span class="price-was">通常 120,000円</span>
             <span class="price-now"><span class="lbl">特別</span>49,800<span class="yen">円</span></span>
@@ -281,7 +295,15 @@
           <span class="plan-badge gold">✦ 満足度 No.1</span>
           <h3 class="plan-name">魂の覚醒ブレス ＋ 天命開花ヒーリング</h3>
           <p class="plan-desc">長く握りしめてきた思い込みや、心の奥のブロックを解きほぐし、心身の深い疲れを解放。「自分の幸せを大切にしていい」と、本来の自分を取り戻せるように導きます。心の安心も、日々のよろこびも——すべてに働きかける、最上位の覚醒プランです。</p>
-          <p class="plan-note">＋ 特別プチ鑑定 2回つき</p>
+          <div class="plan-perks">
+            <span class="perks-label">含まれる特典（すべて無料）</span>
+            <ul>
+              <li>ブレス浄化用さざれ石</li>
+              <li>波動調整サウンド音源</li>
+              <li>Zoom個別セッション<span class="perk-tag">期間限定</span></li>
+              <li>特別プチ鑑定 2回<span class="perk-tag">期間限定</span></li>
+            </ul>
+          </div>
           <div class="price">
             <span class="price-was">通常 189,800円</span>
             <span class="price-now"><span class="lbl">特別</span>79,800<span class="yen">円</span></span>
